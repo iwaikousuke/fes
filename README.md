@@ -32,7 +32,7 @@ Things you may want to cover:
 | name               | text   | null: false  |
 | email              | string | null: false  |
 | password           | string | null: false  |
-| role               | string | null: false  |
+
 
 ###  Association
 - has_many : questions
