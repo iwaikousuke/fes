@@ -12,7 +12,7 @@
   background-color: #FFFFEE;
   padding-bottom: 70px;
   margin: 20px 0;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  box-shadow: 0 0 30px rgba(29, 17, 17, 0.2);
 }
 
 .form-header {
@@ -65,10 +65,10 @@
 
 .register-yellow-btn {
   width: 100%;
-  background: #FFFF00;
+  background: yellow;
   color: black;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 20px;
 }

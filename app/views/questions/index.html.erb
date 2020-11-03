@@ -1,46 +1,38 @@
 <%= render "shared/header" %>
+
+
 <div class='main'>
   <div class='title-contents'>
     <div class='service-title'>
         やろう！創ろう！エンジニア！！
-        <p>Q&Aサイト</p>
+        <p class= 'QA'>Q&Aサイト</p>
     </div>
   </div>
     <h3 class='service-explain'>
-        <p>これから新しく挑戦する事の不安をこの場で！！</p>
-        <p>プログラミングにあたって不安に思っている事を一人で考えず</p>
-        <p>ほら、FESで相談してみませんか！！</p>
-    </p>
+        <p class='aa'>これから新しく挑戦する事の不安をこの場で！！</p>
+        <p class='aa'>プログラミングにあたって不安に思っている事を一人で考えず</p>
+        <p class='aa'>ほら、FESで相談してみませんか！！</p>
     </h3>
-  <div class='question-contents'>
-    <h4 class='title'>質問コーナー</h4>
-      <%= link_to 'NEW質問集', "#", class: "subtitle" %>
-      <% @questions.each do |question| %>
-      <div class= "question">
-        <div class= "question-title">
-          title:<%= question.title %>
-        </div> 
-        <div class= "question-text">
-          Q:<%= question.text %>
+  <div class ='question-main'>
+    <div class='question-contents'>
+      <h4 class='title'>質問コーナー</h4>
+        <%= link_to 'NEW質問集', "#", class: "subtitle" %>
+        <% @questions.each do |question| %>
+        <div class= "question">
+          <div class= "question-title">
+            title:<%= question.title %>
+          </div> 
+          <div class= "question-text">
+            Q:<%= question.text %>
+          </div>
+          <div class="question-date">
+              <%= question.created_at %>
+            by<%= question.user.name %>
+          </div>
+          <div class= "user_name">
+          </div>
         </div>
-        <div class="question-date">
-          投稿日時: <%= question.created_at %>
-        </div>
-        <div class= "user_name">
-          by<%= question.user.name %>
-        </div>
-      </div>
-      <%# <div class='star-btn'>
-        <%= image_tag "star.png", class:"star-icon" %> 
-          <%# <span class='star-count'>0</span>
-      </div> %> 
-      <% end %>
+        <% end %>
+    </div>
   </div>
 </div>
-<%# <div class='purchase-btn'>
-  <span class='purchase-btn-text'>質問する</span>
-  <a href= "/questions/new" > %>
-    <%# <%= image_tag 'camera.png' , size: '185x50' ,class: "purchase-btn-icon" %> 
-  <%# </a> %>
-<%# </div> %>
-<%# <%= render "shared/footer" %>  

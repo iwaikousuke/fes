@@ -1,0 +1,27 @@
+.content-row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 100%;
+}
+.container{
+  color:black;
+  font-size: larger;
+  align-items: center;
+  
+}
+.question-row{
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.title-question{
+  margin: 20px;
+
+}
+
+.text-question{
+}
