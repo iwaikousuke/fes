@@ -53,41 +53,8 @@
   align-items: flex-end;
 }
 
-.question{
-  text-decoration: none;
-  margin-right: 3vw;
-  font-weight: bold;
-  color: #333333;
-  border: 2px solid black;
-}
-
-.user-name {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
-  border: 2px solid black;
-
-}
-
-
-.logout {
-  text-decoration: none;
-  color: #333333;
-  border: 2px solid black;
-}
-
-.login {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  border: 2px solid black;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: #333333;
-  border: 2px solid black;
+.post:hover{
+  color: yellowgreen;
 }
 
 .post{
@@ -100,5 +67,4 @@
   text-align: center;
   border-radius: 3px;
   display: inline-block;
-  
 }

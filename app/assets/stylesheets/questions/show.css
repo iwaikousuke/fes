@@ -1,0 +1,21 @@
+.show-box{
+  color: black;
+}
+
+.box{
+  margin: 100px;
+}
+.q-title{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.q-text{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
