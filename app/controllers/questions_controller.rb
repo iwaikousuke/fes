@@ -2,7 +2,6 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @questions = Question.includes(:user).order('created_at DESC')
   end
@@ -22,7 +21,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    @question = Question.find(params[:id])
+    @answer = Answer.new
+    @answers = @question.answers.includes(:user)
   end
 
   def edit
@@ -40,7 +40,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    unless current_user.id == @question.user.id
+    if current_user.id == @question.user.id
       @question.destroy
       redirect_to root_path
     end
