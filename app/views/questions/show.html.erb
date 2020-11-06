@@ -6,5 +6,32 @@
     <div class="q-text">
       <p>Q:<%= @question.text %></p>
     </div>
+    <span class="name">
+      <a href="/users/<%= @question.user.id %>">
+        <span>投稿者</span><%= @question.user.name %>
+      </a>
+    </span>
+  </div>
+  <div class="container">
+    <% if user_signed_in? && current_user.id != @question.user.id%>
+      <%= form_with(model: [@question, @answer], local: true) do |f| %>
+        <%= render 'shared/error_messages', model: @answer%>
+        <%= f.text_area :text, placeholder: "回答する", rows: "2" %>
+        <%= f.submit "回答する" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ 回答の投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="answers">
+      <h4>＜回答一覧＞</h4>
+      <% if @answers %>
+        <% @answers.each do |answer| %>
+          <p>
+            <strong>回答ユーザー<%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
+            <%= answer.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
