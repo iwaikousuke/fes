@@ -1,21 +1,49 @@
 .show-box{
   color: black;
+  justify-content: center;
+  align-items: center;
 }
 
 .box{
-  margin: 100px;
+  margin: 50px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-bottom: 1px solid black;
+  padding: 33px;
+  width: auto;
 }
+
 .q-title{
   display: flex;
   justify-content: center;
-  padding-bottom: 100px;
+  height:30px;
+  border-bottom: 1px solid black;
+  margin: 3px;
 }
 
 .q-text{
   display: flex;
   justify-content: center;
+  height:80px;
+  bottom: 1px solid black;
 }
 
+.name{
+  margin-top: 10vh;
+  text-align: right;
+}
 
+.container{
+  text-align: center;
+  padding: 1vh 10vw;
+}
 
+.text-area{
+  height:  15vh;
+}
+
+.answers{
+  text-align: center;
+
+}
 
