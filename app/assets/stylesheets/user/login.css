@@ -2,16 +2,30 @@
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .login-yellow-btn {
-  width: 100%;
-  background: #FFFF00;
-  color: black;
-  line-height: 48px;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 20px;
+  display       : inline-block;
+  border-radius : 9%;
+  font-size     : 15pt;
+  text-align    : center;
+  cursor        : pointer;
+  padding       : 9px 9px;
+  background    : rgba(255, 255, 26, 0.37);
+  color         : rgba#999999;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 7px 7px 11px #666666;
+  border        : 2px solid rgba(0, 0, 0, 0.37);
+  align-items: center;
+}
+
+.login-yellow-btn:hover {
+  box-shadow    : none;
+  color         : rgba(255, 255, 26, 0.37);
+  background    : #999999;
 }
 
 .login-flash-message {

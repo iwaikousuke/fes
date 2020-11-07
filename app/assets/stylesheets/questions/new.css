@@ -8,16 +8,55 @@
   color:black;
   font-size: larger;
   align-items: center;
-  
 }
+
 .question-row{
   margin: 20px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  
+  background-color: whitesmoke;
 }
 
 .title-question{
-  margin: 20px;
+  margin: 10px;
 }
+
+.title-question:hover{
+  box-shadow    : none; 
+  color         : #999999;
+}
+
+.text-question{
+  width         : 100vh;
+  margin-bottom: 10px;
+  line-height   : 19px;
+}
+
+.text-question:hover{
+  box-shadow    : none;
+  color         : #999999;
+  margin-top: 10px;
+}
+
+.button{
+  display       : inline-block;
+  border-radius : 5%;
+  font-size     : 13pt;
+  text-align    : right;
+  cursor        : pointer;
+  padding       : 12px 12px;
+  background    : #999999;
+  color         : #ffff4d;
+  line-height   : 1em;
+  transition    : .3s;
+  box-shadow    : 6px 6px 3px #666666;
+  border        : 2px solid #999999;
+}
+.button:hover {
+  box-shadow    : none;
+  color         : #999999;
+  background    : #ffff4d;
+}
+
