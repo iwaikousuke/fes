@@ -11,7 +11,7 @@
       <ul class='lists-right'>
         <% if user_signed_in? %>
           <li><%= link_to 'Q:質問', new_question_path, class: "post"%>
-          <li><%= link_to current_user.name, "#", class: "post"%> </li>
+          <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "post"%> </li>
           <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "post"%> </li>
         <% else %>
             <li><%= link_to 'ログイン', user_session_path, class: "post" %></li>

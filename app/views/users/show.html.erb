@@ -1,0 +1,17 @@
+<div class= "show-box">
+  <div class= "box">
+    <div class= "q-title">
+      <p class= "q-name"> <%= @name %>さんの投稿一覧</p>
+    </div>
+    <% @questions.each do |question| %>
+    <div class= "user-text">
+      <div class="rr"><%= question.text %>
+      <p class= "date"><%= question.created_at %></p>
+      </div>
+    </div>
+    <% end %>
+    <% @answers.each do |answer| %>
+    <%= answer.text %>
+    <% end %>
+  </div>
+</div>
