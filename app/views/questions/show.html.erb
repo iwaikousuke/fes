@@ -1,10 +1,10 @@
 <div class="show-box">
   <div class="box">
     <div class= "q-title">
-      <p>title:<%= @question.title %></p>
+      title:<%= @question.title %>
     </div>
-    <div class="q-text">
-      <p>Q:<%= @question.text %></p>
+    <div class="user-text">
+      <div class= "rr">Q:<%= @question.text %></div>
     </div>
     <div class="name">
       <a href="/users/<%= @question.user.id %>">
@@ -27,7 +27,7 @@
       <% if @answers %>
         <% @answers.each do |answer| %>
           <p>
-            <strong>回答ユーザー<%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
+            <strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
             <%= answer.text %>
           </p>
         <% end %>

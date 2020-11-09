@@ -2,23 +2,38 @@
   color: black;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 .box{
   margin: 50px;
   text-align: center;
   background-color: whitesmoke;
-  border-bottom: 1px solid black;
   padding: 33px;
-  width: auto;
+  max-width: 100%;
 }
 
 .q-title{
-  display: flex;
-  justify-content: center;
   height:30px;
   border-bottom: 1px solid black;
   margin: 3px;
+  max-width: 100%;
+}
+
+.q-name{
+  text-align: left;
+  font-size: 20px;
+  color          : rgba(0, 0, 0, 0.85);            /* 文字の色 */
+  letter-spacing : 4px;                /* 文字間 */
+  text-shadow    : 
+       2px  2px 1px #ffff1a,
+      -2px  2px 1px #ffff1a,
+       2px -2px 1px #ffff1a,
+      -2px -2px 1px #ffff1a,
+       2px  0px 1px #ffff1a,
+       0px  2px 1px #ffff1a,
+      -2px  0px 1px #ffff1a,
+       0px -2px 1px #ffff1a;        /* 文字の影 */
 }
 
 .q-text{
@@ -28,8 +43,23 @@
   bottom: 1px solid black;
 }
 
+.user-text{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.rr{
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 28px 0px;
+}
+
+.date{
+  text-align: right;
+}
+
 .name{
-  margin-top: 10vh;
   text-align: right;
 }
 
