@@ -16,24 +16,18 @@
 .q-title{
   height:30px;
   border-bottom: 1px solid black;
-  margin: 3px;
   max-width: 100%;
+  letter-spacing : 2px;
+  margin: 30px;
+    padding-bottom: 40px;
 }
 
 .q-name{
   text-align: left;
   font-size: 20px;
-  color          : rgba(0, 0, 0, 0.85);            /* 文字の色 */
-  letter-spacing : 4px;                /* 文字間 */
-  text-shadow    : 
-       2px  2px 1px #ffff1a,
-      -2px  2px 1px #ffff1a,
-       2px -2px 1px #ffff1a,
-      -2px -2px 1px #ffff1a,
-       2px  0px 1px #ffff1a,
-       0px  2px 1px #ffff1a,
-      -2px  0px 1px #ffff1a,
-       0px -2px 1px #ffff1a;        /* 文字の影 */
+  border-bottom: 1px solid black;
+  color          : rgba(0, 0, 0, 0.85);
+  letter-spacing : 4px;
 }
 
 .q-text{
@@ -47,6 +41,7 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
+  letter-spacing : 2px;
 }
 
 .rr{

@@ -1,15 +1,18 @@
 <div class="show-box">
   <div class="box">
+  <div class="q-name">
+      <a href="/users/<%= @question.user.id %>">
+        投稿者<%= @question.user.name %>
+      </a>
+  </div>
     <div class= "q-title">
-      title:<%= @question.title %>
+      <div class= "title">title:<%= @question.title %></div>
     </div>
     <div class="user-text">
-      <div class= "rr">Q:<%= @question.text %></div>
-    </div>
-    <div class="name">
-      <a href="/users/<%= @question.user.id %>">
-        <span>投稿者</span><%= @question.user.name %>
-      </a>
+      <div class= "rr">Q:<%= @question.text %>
+        <div class = "date"><%= l @question.created_at %>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">

@@ -48,7 +48,7 @@
             Q:<%= link_to question.text, question_path(question.id) %>
           </div>
           <div class="question-date">
-            <%= question.created_at %>
+            <%= l question.created_at %>
             by<%= link_to question.user.name, user_path(question.user.id) %>
           </div>
         </div>
