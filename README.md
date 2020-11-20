@@ -82,7 +82,7 @@ Things you may want to cover:
 - has_many : questions
 - has_many : answer
 
-##  questions
+##  questionsテーブル
 
 | Column             | Type       | Options      |
 | ------------------ | ---------- | ------------ |
@@ -94,7 +94,7 @@ Things you may want to cover:
 - has_many :answer
 - belongs_to : user
 
-###  answers
+## answersテーブル
 
 | Column             | Type   | Options      |
 | ------------------ | ------ | ------------ |
@@ -106,7 +106,5 @@ Things you may want to cover:
 - belongs_to : question
 - belongs_to : user
 
-## テーブル数は少ないが、一応ER図
+## ER図
 <a href="https://gyazo.com/e5d7a21c674b392635a71213f28afc52"><img src="https://i.gyazo.com/e5d7a21c674b392635a71213f28afc52.png" alt="Image from Gyazo" width="500"/></a>
-
-
