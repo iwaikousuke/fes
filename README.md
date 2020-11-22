@@ -63,10 +63,6 @@ Things you may want to cover:
 ### 一人のユーザーがどれだけの不安や悩みを相談しているか確認する事ができます。
 <a href="https://gyazo.com/891d47dc03128169eaa02e435c7a14ce"><img src="https://i.gyazo.com/891d47dc03128169eaa02e435c7a14ce.gif" alt="Image from Gyazo" width="1000"/></a>
 
-### 今後の追加実装
-- 返信機能(11/17~18)
-- いいね機能（11/19)
-- ベストアンサー機能(11/20)
 
 ## テーブル設計
 ##  usersテーブル
