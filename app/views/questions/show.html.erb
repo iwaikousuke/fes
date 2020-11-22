@@ -16,14 +16,15 @@
     </div>
   </div>
   <div class="container">
-    <% if user_signed_in? && current_user.id != @question.user.id%>
+    <% if user_signed_in? && current_user.id != @question.user.id %>
       <%= form_with(model: [@question, @answer], local: true) do |f| %>
         <%= render 'shared/error_messages', model: @answer %>
         <%= f.text_area name= :text, placeholder: "回答する", size: "70*70", class:"text-area" %>
         <%= f.submit "回答", class: "button", size: "40*40" %>
       <% end %>
-    <% else %>
-      <strong><p>※※※ 回答の投稿には新規登録/ログインが必要です ※※※</p></strong>
+     <% elsif user_signed_in? && current_user.id == @question.user.id %> 
+    <% else%>
+      <strong><p><%= link_to '回答するにはログイン/新規登録をしよう', user_session_path, class: '' %></p></strong>
     <% end %>
     <div class="answers">
       <h4>＜回答一覧＞</h4>
