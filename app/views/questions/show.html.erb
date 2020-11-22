@@ -16,26 +16,25 @@
     </div>
   </div>
   <div class="container">
-    <% if user_signed_in? && current_user.id != @question.user.id %>
-      <%= form_with(model: [@question, @answer], local: true) do |f| %>
-        <%= render 'shared/error_messages', model: @answer %>
-        <%= f.text_area name= :text, placeholder: "回答する", size: "70*70", class:"text-area" %>
-        <%= f.submit "回答", class: "button", size: "40*40" %>
-      <% end %>
-     <% elsif user_signed_in? && current_user.id == @question.user.id %> 
-    <% else%>
-      <strong><p><%= link_to '回答するにはログイン/新規登録をしよう', user_session_path, class: '' %></p></strong>
-    <% end %>
-    <div class="answers">
-      <h4>＜回答一覧＞</h4>
-      <% if @answers %>
-        <% @answers.each do |answer| %>
-          <p>
-            <strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}" %>：</strong>
-            <%= answer.text %>
-          </p>
+    <div class = "answer-container">
+      <% if user_signed_in? && current_user.id != @question.user.id %>
+        <%= form_with(model: [@question, @answer], local: true) do |f| %>
+          <%= f.text_area name=:text, placeholder: "回答する",class:"textarea" %>
+          <%= f.submit "回答", class: "button", size: "40*40" %>
         <% end %>
+       <% elsif user_signed_in? && current_user.id == @question.user.id %> 
+      <% else%>
+        <strong><p><%= link_to '回答するにはログイン/新規登録をしよう', user_session_path, class: '' %></p></strong>
       <% end %>
+      <div class= "answers">
+        <h4 class= "an4">＜回答一覧＞</h4>
+          <% @answers.each do |answer| %>
+            <div class= "text"><%= answer.text %></div>
+            <div class= "g">
+              <%= l answer.created_at %><strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}" %></strong>
+            </div>
+          <% end %>
+      </div>
     </div>
   </div>
 </div>
