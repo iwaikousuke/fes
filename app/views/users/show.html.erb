@@ -11,8 +11,14 @@
       </div>
     </div>
     <% end %>
-    <% @answers.each do |answer| %>
-    <%= answer.text %>
-    <% end %>
+    <div class= "answers">
+      <h4 class= "an4">＜回答一覧＞</h4>
+        <% @answers.each do |answer| %>
+          <div class= "text"><%= answer.text %></div>
+            <div class= "g">
+              <%= l answer.created_at %>
+            </div>
+          <% end %>
+    </div>
   </div>
 </div>

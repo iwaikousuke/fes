@@ -1,36 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # アプリケーション名
 ## FES(Fledgling engineer support)
 
 ## アプリケーション概要
-### これからエンジニアやプログラミングを学ぼうと思っている人達の、マインド面（不安・悩み）を相談でき、エンジニア経験者からリアルな声を聞く事ができるような、Q&Aサイトを作成しました。
+#### これからエンジニアやプログラミングを学ぼうと思っている人達の、マインド面（不安・悩み）を相談でき、エンジニア経験者からリアルな声を聞く事ができるような、Q&Aサイトを作成しました。
 
 ## 制作背景
-### 実際、私自身がマインド面で相談したい直面に立たされたからです。テックキャンプでは入校前に事前カウンセリングというサービスを行っていたから相談する事ができたが、もっと簡易的に不安や悩みを相談出来るのではないかと課題化し、解決策としてこちらのサイトを制作いたしました。
+#### 実際、私自身がマインド面で相談したい直面に立たされたからです。テックキャンプでは入校前に事前カウンセリングというサービスを行っていたから相談する事ができたが、もっと簡易的に不安や悩みを相談出来るのではないかと課題化し、解決策としてこちらのサイトを制作いたしました。
 
 ## 洗い出した要件
 | 機能                | 目的    |
@@ -48,21 +23,20 @@ Things you may want to cover:
 <a href="https://gyazo.com/3e358d3efd80ee432500f9d8f4ec1cbd"><img src="https://i.gyazo.com/3e358d3efd80ee432500f9d8f4ec1cbd.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## 新規登録画面・ログイン画面です。
-### フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
+#### フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
 <a href="https://gyazo.com/599b4a02a8ccfae352117c70994fa43e"><img src="https://i.gyazo.com/599b4a02a8ccfae352117c70994fa43e.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## 質問投稿画面です。
-### ログインしている事が前提です。フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
+#### ログインしている事が前提です。フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
 <a href="https://gyazo.com/ab776f7988c60a1cdab7a0943c9d4103"><img src="https://i.gyazo.com/ab776f7988c60a1cdab7a0943c9d4103.gif" alt="Image from Gyazo" width="1000"/></a>
 
-## 質問詳細ページです。
-### ログインしていなくても表示する事ができます。質問一覧表示のQをクリック、もしくはプルダウンメニューから詳細をクリックすると、遷移します。
-<a href="https://gyazo.com/dc6dfaf4bd79d8ba100507e657acfa0f"><img src="https://i.gyazo.com/dc6dfaf4bd79d8ba100507e657acfa0f.gif" alt="Image from Gyazo" width="1000"/></a>
+## 質問詳細ページ・回答一覧です。
+#### ログインしていなくても表示する事ができます。質問一覧表示のQをクリック、もしくはプルダウンメニューから詳細をクリックすると、遷移します。
+<a href="https://gyazo.com/cbcddb1c678ea25541ffec4de0e28268"><img src="https://i.gyazo.com/cbcddb1c678ea25541ffec4de0e28268.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## ユーザー詳細ページです。
-### 一人のユーザーがどれだけの不安や悩みを相談しているか確認する事ができます。
-<a href="https://gyazo.com/891d47dc03128169eaa02e435c7a14ce"><img src="https://i.gyazo.com/891d47dc03128169eaa02e435c7a14ce.gif" alt="Image from Gyazo" width="1000"/></a>
-
+#### 一人のユーザーがどれだけの不安や悩みを相談しているか確認する事ができます。質問・回答と両方見れる様にしています。
+<a href="https://gyazo.com/351921b3090b70a61ad99cb32d99a4ad"><img src="https://i.gyazo.com/351921b3090b70a61ad99cb32d99a4ad.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## テーブル設計
 ##  usersテーブル
@@ -103,4 +77,7 @@ Things you may want to cover:
 - belongs_to : user
 
 ## ER図
-<a href="https://gyazo.com/e5d7a21c674b392635a71213f28afc52"><img src="https://i.gyazo.com/e5d7a21c674b392635a71213f28afc52.png" alt="Image from Gyazo" width="500"/></a>
+<a href="https://gyazo.com/f5e6b761e0b455f783524848db118a15"><img src="https://i.gyazo.com/f5e6b761e0b455f783524848db118a15.png" alt="Image from Gyazo" width="817"/></a>
+
+## 画面遷移図
+<a href="https://gyazo.com/f38820b11f6643b9accd21767a5e5515"><img src="https://i.gyazo.com/f38820b11f6643b9accd21767a5e5515.png" alt="Image from Gyazo" width="825"/></a>
