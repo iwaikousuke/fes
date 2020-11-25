@@ -28,8 +28,12 @@
   border-bottom: 1px solid black;
   color          : rgba(0, 0, 0, 0.85);
   letter-spacing : 4px;
+  text-decoration: none;
 }
 
+.q-name:hover{
+  text-decoration: underline;
+}
 .q-text{
   display: flex;
   justify-content: center;
@@ -118,4 +122,12 @@
 .g{
   border-bottom: 1px solid black;
   text-align: right;
+}
+
+.ac{
+  text-decoration: none;
+}
+
+.ac:hover{
+  text-decoration: underline;
 }

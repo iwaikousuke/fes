@@ -24,7 +24,7 @@
         <% end %>
        <% elsif user_signed_in? && current_user.id == @question.user.id %> 
       <% else%>
-        <strong><p><%= link_to '回答するにはログイン/新規登録をしよう', user_session_path, class: '' %></p></strong>
+        <strong><p><%= link_to '回答するにはログイン/新規登録をしよう', user_session_path, class: 'ac' %></p></strong>
       <% end %>
       <div class= "answers">
         <h4 class= "an4">＜回答一覧＞</h4>
