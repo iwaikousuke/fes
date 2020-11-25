@@ -14,10 +14,12 @@
 - #### [heroku](https://fes-a.herokuapp.com/)
 
 ## テスト用アカウント
-- #### Email: test2@gmail.com
-- ####        test3@gmail.com
-- #### Pass:  testtest2
-- ####        testtest3
+- #### Email 
+##### 1.test2@gmail
+##### 2.test3@gmail
+- #### Pass
+##### 1.testtest2
+##### 2.testtest3
 
 
 ## 洗い出した要件
@@ -33,9 +35,9 @@
 
 ## 今後実装したい機能
 * #### ベストアンサー機能(質問に対して良い回答を一目でわかる様にする為）
-* #### いいね機能（トップページの一覧と詳細ページで良いと思った質問・回答に共感できるようにする為→ベストアンサーにも紐づかれるため）
+* #### いいね機能（トップページの一覧と詳細ページで良いと思った質問・回答に共感できるようにする為→ベストアンサーにも紐付ける為）
 
-## デモ画面です。
+# DEMO
 ## トップページです。
 <a href="https://gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73"><img src="https://i.gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73.gif" alt="Image from Gyazo" width="1000"/></a>
 
