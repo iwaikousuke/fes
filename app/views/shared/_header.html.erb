@@ -2,12 +2,6 @@
 <header class='top-page-header'>
   <div class='search-bar-contents'>
       <%= link_to image_tag("fes.png", class:"fes-icon"),"/" %> 
-      <form class="search-form" action="#">
-        <input class='input-box' placeholder='キーワードから検索'>
-        <button class="search-button">
-          <%= image_tag "search.png", class:"search-icon" %> 
-        </button>
-      </form>
       <ul class='lists-right'>
         <% if user_signed_in? %>
           <li><%= link_to 'Q:質問', new_question_path, class: "post"%>

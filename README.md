@@ -10,6 +10,16 @@
 ## ペルソナ
 #### 性別・年齢：20代〜40代半ばの男女
 
+## デプロイURL
+- #### [heroku](https://fes-a.herokuapp.com/)
+
+## テスト用アカウント
+- #### Email: test2@gmail.com
+- ####        test3@gmail.com
+- #### Pass:  testtest2
+- ####        testtest3
+
+
 ## 洗い出した要件
 | 機能                | 目的    |
 | -----------------  | ------  |
@@ -21,25 +31,29 @@
 | ユーザー詳細機能      | 一人のユーザーの悩みや不安の相談を一覧として閲覧できる様にしたいため |
 | フロント実装機能    | ユーザー目線で考え、迷子にならない様にcss jsなどを使い見た目を整えました |
 
-## DEMO
+## 今後実装したい機能
+* #### ベストアンサー機能(質問に対して良い回答を一目でわかる様にする為）
+* #### いいね機能（トップページの一覧と詳細ページで良いと思った質問・回答に共感できるようにする為→ベストアンサーにも紐づかれるため）
+
+## デモ画面です。
 ## トップページです。
-<a href="https://gyazo.com/3e358d3efd80ee432500f9d8f4ec1cbd"><img src="https://i.gyazo.com/3e358d3efd80ee432500f9d8f4ec1cbd.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73"><img src="https://i.gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## 新規登録画面・ログイン画面です。
 #### フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
-<a href="https://gyazo.com/599b4a02a8ccfae352117c70994fa43e"><img src="https://i.gyazo.com/599b4a02a8ccfae352117c70994fa43e.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/2c87d321e6b5d0cf8e4a685e3975b3c2"><img src="https://i.gyazo.com/2c87d321e6b5d0cf8e4a685e3975b3c2.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## 質問投稿画面です。
 #### ログインしている事が前提です。フォームが空の場合だと保存できず、エラーメッセージが表示される様にしています。
-<a href="https://gyazo.com/ab776f7988c60a1cdab7a0943c9d4103"><img src="https://i.gyazo.com/ab776f7988c60a1cdab7a0943c9d4103.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/e8ad33cf91d83987ad9ad4a8f16cbd7b"><img src="https://i.gyazo.com/e8ad33cf91d83987ad9ad4a8f16cbd7b.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## 質問詳細ページ・回答一覧です。
 #### ログインしていなくても表示する事ができます。質問一覧表示のQをクリック、もしくはプルダウンメニューから詳細をクリックすると、遷移します。
-<a href="https://gyazo.com/cbcddb1c678ea25541ffec4de0e28268"><img src="https://i.gyazo.com/cbcddb1c678ea25541ffec4de0e28268.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/e380f671b7f305d9fe5e1ecd8566a3f0"><img src="https://i.gyazo.com/e380f671b7f305d9fe5e1ecd8566a3f0.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## ユーザー詳細ページです。
 #### 一人のユーザーがどれだけの不安や悩みを相談しているか確認する事ができます。質問・回答と両方見れる様にしています。
-<a href="https://gyazo.com/351921b3090b70a61ad99cb32d99a4ad"><img src="https://i.gyazo.com/351921b3090b70a61ad99cb32d99a4ad.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/97668a17d8b3332bdbe4e81ce8461a6f"><img src="https://i.gyazo.com/97668a17d8b3332bdbe4e81ce8461a6f.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## テーブル設計
 ##  usersテーブル
