@@ -14,12 +14,12 @@
 - #### [heroku](https://fes-a.herokuapp.com/)
 
 ## テスト用アカウント
-- #### Email 
-##### 1.test2@gmail
-##### 2.test3@gmail
+- #### Email
+- ##### 1.test2@gmail
+- ##### 2.test3@gmail
 - #### Pass
-##### 1.testtest2
-##### 2.testtest3
+- ##### 1.testtest2
+- ##### 2.testtest3
 
 
 ## 洗い出した要件
