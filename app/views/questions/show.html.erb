@@ -1,20 +1,33 @@
 <div class="show-box">
   <div class="box">
-  <div class="q-name">
-      <a href="/users/<%= @question.user.id %>">
-        投稿者<%= @question.user.name %>
-      </a>
-  </div>
+    <div class="q-name">
+        <a href="/users/<%= @question.user.id %>">
+          投稿者<%= @question.user.name %>
+        </a>
+    </div>
     <div class= "q-title">
       <div class= "title">title:<%= @question.title %></div>
     </div>
     <div class="user-text">
       <div class= "rr">Q:<%= @question.text %>
         <div class = "date"><%= l @question.created_at %>
+          <div class="like-link" id="like-link-<%= @question.id %>">
+            <% if user_signed_in? %>
+              <% if current_user.likes.find_by(question_id: @question.id) %>
+                <%= link_to question_like_path(@question.id), method: :delete, remote: true do %>
+                    <div class = "line_button">❤️<%= @question.likes.count %></div>
+                <% end %>
+              <% else %>
+                <%= link_to question_likes_path(@question.id), method: :post, remote: true do %>
+                    <div class = "line_button">♡️<%= @question.likes.count %></div>
+                <% end %>
+              <% end %>
+              <% end %>
+            </div>
         </div>
       </div>
     </div>
-  </div>
+    
   <div class="container">
     <div class = "answer-container">
       <% if user_signed_in? && current_user.id != @question.user.id %>

@@ -131,3 +131,59 @@
 .ac:hover{
   text-decoration: underline;
 }
+
+.service-title {
+  overflow: hidden;
+  position: center;
+}
+
+.service-title:before,
+.service-title:after {
+  animation: 2s cubic-bezier(.4, 0, .2, 1) forwards;
+  background: #fff;
+  content: '';
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.service-title:before {
+  animation-name: service-title-before;
+  top: 0;
+  bottom: 50%;
+}
+
+.service-title:after {
+  animation-name: service-title-after;
+  top: 50%;
+  bottom: 0;
+}
+
+@keyframes service-title-before {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes service-title-after {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.line_button{
+  display: flex;
+  line-height: 42px;
+  color: #6d3701;
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 18px;
+  border-radius: 100px;
+  font-weight: bold;
+}
+
+.line{
+  padding: 1px;
+}
