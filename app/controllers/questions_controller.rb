@@ -23,6 +23,7 @@ class QuestionsController < ApplicationController
   def show
     @answer = Answer.new
     @answers = @question.answers.includes(:user)
+    @likes = current_user.likes.find_by(question_id: @question.id)
     @like = Like.new
   end
 
