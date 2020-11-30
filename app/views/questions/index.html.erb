@@ -39,7 +39,7 @@
           </div>
           <div class="question-date">
             <%= l question.created_at %>
-            by<%= link_to question.user.name, user_path(question.user.id) %>
+            by<%= link_to question.user.name, user_path(question.user.id), class:'ac' %>
             
           </div>
         </div>
