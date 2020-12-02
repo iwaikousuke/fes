@@ -13,14 +13,18 @@
         <div class = "date"><%= l @question.created_at %>
           <div class="like-link" id="like-link-<%= @question.id %>">
             <% if user_signed_in? %>
-              <% if current_user.likes.find_by(question_id: @question.id) %>
-                <%= link_to question_like_path(@question.id), method: :delete, remote: true do %>
-                  <div class = "line_button">❤️<%= @question.likes.count %></div>
+              <% if current_user.id != @question.user.id %>
+                <% if @likes %>
+                  <%= link_to question_like_path(@question.id), method: :delete, remote: true do %>
+                    <div class = "line_button">❤️<%= @question.likes.count %></div>
+                  <% end %>
+                <% else %>
+                  <%= link_to question_likes_path(@question.id), method: :post, remote: true do %>
+                    <div class = "line_button">♡️<%= @question.likes.count %></div>
+                  <% end %>
                 <% end %>
               <% else %>
-                <%= link_to question_likes_path(@question.id), method: :post, remote: true do %>
-                  <div class = "line_button">♡️<%= @question.likes.count %></div>
-                <% end %>
+                <div class = "line_button">❤️<%= @question.likes.count%></div>
               <% end %>
             <% else%>
               <div class = "line_button">❤️<%= @question.likes.count%></div>
@@ -49,16 +53,7 @@
               <div class= "g">
                 <%= l answer.created_at %><strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}", class:'ac' %></strong>
                 <% if user_signed_in?%>
-                  <% if @likes %>
-                    <%= link_to question_like_path(@question.id), method: :delete, remote: true do %>
-                      <div class = "line_button">❤️<%= @question.likes.count %></div>
-                    <% end %>
-                  <% else %>
-                    <%= link_to question_likes_path(@question.id), method: :post, remote: true do %>
-                      <div class = "line_button">♡️<%= @question.likes.count %></div>
-                    <% end %>
-                  <% end %>
-                <% else%>
+                <% else %>
                   <div class = "line_button">❤️<%= @question.likes.count%></div>
                 <% end %>
               </div>
