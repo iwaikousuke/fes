@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :questions do
     resources :answers
-    resources :likes, only: [:create, :destroy]
   end
+  resources :questions do
+    resources :likes, only: [:create, :destroy]
+    end
   resources :users, only: :show
 end
