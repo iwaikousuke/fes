@@ -3,13 +3,18 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :questions, dependent: :destroy
-  has_many :answers, dependent: :destroy
+         
+  has_many :questions, through: :likes, dependent: :destroy
+  has_many :answers, through: :nices, dependent: :destroy
   has_many :likes, dependent: :destroy
-  has_many :liked_questions, through: :likes, source: :question
+  has_many :nices, dependent: :destroy
 
   def already_liked?(question)
     self.likes.exists?(question_id: question.id)
+  end
+
+  def already_niced?(answer)
+    self.nices.exists?(answer_id: answer.id)
   end
 
   with_options presence: true do

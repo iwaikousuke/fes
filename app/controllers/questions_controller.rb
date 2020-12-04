@@ -25,6 +25,8 @@ class QuestionsController < ApplicationController
     @answers = @question.answers.includes(:user)
     @likes = @question.likes.find_by(question_id: @question.id)
     @like = Like.new
+    @nices = @answer.nices.find_by(answer_id: @answer.id)
+    @nice = Nice.new
   end
 
   def edit
