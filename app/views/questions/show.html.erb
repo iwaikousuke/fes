@@ -53,8 +53,21 @@
               <div class= "g">
                 <%= l answer.created_at %><strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}", class:'ac' %></strong>
                 <% if user_signed_in?%>
+                  <% if current_user.id != answer.user_id %>
+                    <% if @nices %>
+                      <%= link_to answer_nice_path(answer.id), method: :delete, remote: true do %>
+                        <div class = "line_button">❤️<%= answer.nices.count %></div>
+                      <% end %>
+                    <% else %>
+                      <%= link_to answer_nices_path(answer.id), method: :post, remote: true do %>
+                        <div class = "line_button">♡️<%= answer.nices.count %></div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <div class = "line_button">❤️<%= answer.nices.count%></div>
+                  <% end %>
                 <% else %>
-                  <div class = "line_button">❤️<%= @question.likes.count%></div>
+                  <div class = "line_button">❤️<%= answer.nices.count%></div>
                 <% end %>
               </div>
           <% end %>
