@@ -23,10 +23,11 @@ class QuestionsController < ApplicationController
   def show
     @answer = Answer.new
     @answers = @question.answers.includes(:user)
-    @likes = @question.likes.find_by(question_id: @question.id)
     @like = Like.new
-    @nices = @answer.nices.find_by(answer_id: @answer.id)
     @nice = Nice.new
+    @like = Like.find_by(question_id: params[:question_id], user_id: current_user.id)
+    @nice = Nice.find_by(answer_id: params[:answer_id], user_id: current_user.id)
+
   end
 
   def edit
@@ -48,6 +49,9 @@ class QuestionsController < ApplicationController
       @question.destroy
       redirect_to root_path
     end
+    @like = Like.find_by(question_id: params[:question_id], user_id: current_user.id)
+    @like.destroy
+    redirect_back(fallback_location: root_path)
   end
 
   private

@@ -14,7 +14,7 @@
           <div class="like-link" id="like-link-<%= @question.id %>">
             <% if user_signed_in? %>
               <% if current_user.id != @question.user.id %>
-                <% if @likes %>
+                <% if current_user.already_liked?(@question) %>
                   <%= link_to question_like_path(@question.id), method: :delete, remote: true do %>
                     <div class = "line_button">❤️<%= @question.likes.count %></div>
                   <% end %>
@@ -55,7 +55,7 @@
                 <% if user_signed_in?%>
                   <% if current_user.id != answer.user_id %>
                     <% if @nices %>
-                      <%= link_to answer_nice_path(answer.id), method: :delete, remote: true do %>
+                      <%= link_to answer_nice_path(@answers.id), method: :delete, remote: true do %>
                         <div class = "line_button">❤️<%= answer.nices.count %></div>
                       <% end %>
                     <% else %>
