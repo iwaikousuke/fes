@@ -57,7 +57,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:title, :text).merge(user_id: current_user.id)
+    params.require(:question).permit(:title, :text, :best_answer_id).merge(user_id: current_user.id)
   end
 
   def set_tweet

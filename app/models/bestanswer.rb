@@ -1,0 +1,2 @@
+class Bestanswer < ApplicationRecord
+end
