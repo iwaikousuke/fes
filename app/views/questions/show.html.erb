@@ -49,7 +49,6 @@
         <h4 class= "an4">＜回答一覧＞</h4>
           <% @answers.each do |answer| %>
             <div class= "text"><%= answer.text %>
-              
             </div>
               <div class= "g">
                 <%= l answer.created_at %><strong>回答者<%= link_to answer.user.name, "/users/#{answer.user_id}", class:'ac' %></strong>
