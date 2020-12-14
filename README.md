@@ -32,10 +32,10 @@
 | 質問詳細機能         | 一覧ではユーザー目線を考え沢山の質問をみて欲しかったため、質問詳細ページから回答できるようにするため
 | ユーザー詳細機能      | 一人のユーザーの悩みや不安の相談を一覧として閲覧できる様にしたいため |
 | フロント実装機能    | ユーザー目線で考え、迷子にならない様にcss jsなどを使い見た目を整えました |
+| いいね機能         | 不安や悩みにいいねと共感できる為|
 
 ## 今後実装したい機能
 * #### ベストアンサー機能(質問に対して良い回答を一目でわかる様にする為）
-* #### いいね機能（トップページの一覧と詳細ページで良いと思った質問・回答に共感できるようにする為→ベストアンサーにも紐付ける為）
 
 # DEMO
 ## トップページです。
@@ -51,11 +51,11 @@
 
 ## 質問詳細ページ・回答一覧です。
 #### ログインしていなくても表示する事ができます。質問一覧表示のQをクリック、もしくはプルダウンメニューから詳細をクリックすると、遷移します。
-<a href="https://gyazo.com/e380f671b7f305d9fe5e1ecd8566a3f0"><img src="https://i.gyazo.com/e380f671b7f305d9fe5e1ecd8566a3f0.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/f27bd875a280ddc4c7e608ae31b95742"><img src="https://i.gyazo.com/f27bd875a280ddc4c7e608ae31b95742.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## ユーザー詳細ページです。
 #### 一人のユーザーがどれだけの不安や悩みを相談しているか確認する事ができます。質問・回答と両方見れる様にしています。
-<a href="https://gyazo.com/97668a17d8b3332bdbe4e81ce8461a6f"><img src="https://i.gyazo.com/97668a17d8b3332bdbe4e81ce8461a6f.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/dfbaeb8bc8b4a0534c06702c381008d4"><img src="https://i.gyazo.com/dfbaeb8bc8b4a0534c06702c381008d4.gif" alt="Image from Gyazo" width="1000"/></a>
 
 ## テーブル設計
 ##  usersテーブル
@@ -95,8 +95,27 @@
 - belongs_to : question
 - belongs_to : user
 
+### likesテーブル
+| Column             | Type   | Options      |
+| ------------------ | ------ | ------------ |
+| user               | references | null: false, foreign_key: true |
+| question           | references | null: false, foreign_key: true |
+
+###  Association
+- belongs_to : question
+- belongs_to : user
+
+### nicesテーブル
+| Column             | Type   | Options      |
+| ------------------ | ------ | ------------ |
+| user               | references | null: false, foreign_key: true |
+| answer             | references | null: false, foreign_key: true |
+
+###  Association
+- belongs_to : answer
+- belongs_to : user
 ## ER図
-<a href="https://gyazo.com/f5e6b761e0b455f783524848db118a15"><img src="https://i.gyazo.com/f5e6b761e0b455f783524848db118a15.png" alt="Image from Gyazo" width="817"/></a>
+<a href="https://gyazo.com/276a187323fcba59363f401491f767c4"><img src="https://i.gyazo.com/276a187323fcba59363f401491f767c4.png" alt="Image from Gyazo" width="572"/></a>
 
 ## 画面遷移図
 <a href="https://gyazo.com/ad441eb98b7557d3acda70f7d2b48248"><img src="https://i.gyazo.com/ad441eb98b7557d3acda70f7d2b48248.png" alt="Image from Gyazo" width="816"/></a>
