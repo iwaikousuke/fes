@@ -34,9 +34,6 @@
 | フロント実装機能    | ユーザー目線で考え、迷子にならない様にcss jsなどを使い見た目を整えました |
 | いいね機能         | 不安や悩みにいいねと共感できる為|
 
-## 今後実装したい機能
-* #### ベストアンサー機能(質問に対して良い回答を一目でわかる様にする為）
-
 # DEMO
 ## トップページです。
 <a href="https://gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73"><img src="https://i.gyazo.com/9ed2db80a9b0b39a9a30bf3b390cee73.gif" alt="Image from Gyazo" width="1000"/></a>
