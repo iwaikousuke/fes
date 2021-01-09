@@ -24,20 +24,6 @@ a {
   text-align: center;
 }
 
-.flexcontainer{
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background-image: image-url('question.png');
-}
- 
-.flexitem{
-  width: 30%;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-}
-
 .question-main{
   margin: 10vh 20vw;
 }
